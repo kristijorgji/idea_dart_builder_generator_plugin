@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>kristijorgji.com.dartgeneratorbuilder</id>
+    <name>Dart Builder Generator</name>
+    <vendor email="admin@kristijorgji.com" url="https://www.kristijorgji.com">Kristi Jorgji</vendor>
+
+    <description><![CDATA[
+    Generate Builder Classes For Dart Data Objects
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="com.kristijorgji.idea.plugins.dartgeneratorbuilder" text="Kristi" popup="true">
+            <add-to-group group-id="MainMenu" anchor="first"/>
+            <action id="com.kristijorgji.idea.plugins.dartgeneratorbuilder.actions.BuilderAction"
+                    class="com.kristijorgji.idea.plugins.dartgeneratorbuilder.actions.BuilderAction" text="Dart Builder Generator"
+                    description="Generate builder class">
+            </action>
+            <action id="com.kristijorgji.idea.plugins.dartgeneratorbuilder.actions.TestEventAction"
+                    class="com.kristijorgji.idea.plugins.dartgeneratorbuilder.actions.TestEventAction" text="Test Event"
+                    description="Just show test event">
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
